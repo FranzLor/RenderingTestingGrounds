@@ -1,7 +1,11 @@
-
 #version 330 core
+
+//outputs color in RGBA
 out vec4 FragColor;
-void main()
-{
-   FragColor = vec4(0.3f, 0.6f, 0.9f, 1.0f);
+
+//inputs color from vert shader
+in vec3 color;
+
+void main() {
+   FragColor = vec4(color, 1.0f);
 }
